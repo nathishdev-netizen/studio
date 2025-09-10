@@ -53,7 +53,7 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <Sidebar>
+    <Sidebar className="hidden md:flex">
       <SidebarHeader>
         <Link href="/" className="flex items-center gap-2">
           <Sparkles className="h-7 w-7 text-primary" />
