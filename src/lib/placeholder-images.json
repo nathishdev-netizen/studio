@@ -1,3 +1,53 @@
+
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "user-alex",
+      "description": "Profile picture for Alex",
+      "imageUrl": "https://picsum.photos/seed/alex/400/400",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "user-sam",
+      "description": "Profile picture for Sam",
+      "imageUrl": "https://picsum.photos/seed/sam/400/400",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "user-jordan",
+      "description": "Profile picture for Jordan",
+      "imageUrl": "https://picsum.photos/seed/jordan/400/400",
+      "imageHint": "person reading"
+    },
+    {
+      "id": "user-casey",
+      "description": "Profile picture for Casey",
+      "imageUrl": "https://picsum.photos/seed/casey/400/400",
+      "imageHint": "woman nature"
+    },
+    {
+      "id": "user-morgan",
+      "description": "Profile picture for Morgan",
+      "imageUrl": "https://picsum.photos/seed/morgan/400/400",
+      "imageHint": "man glasses"
+    },
+    {
+      "id": "user-riley",
+      "description": "Profile picture for Riley",
+      "imageUrl": "https://picsum.photos/seed/riley/400/400",
+      "imageHint": "person hiking"
+    },
+    {
+      "id": "user-taylor",
+      "description": "Profile picture for Taylor",
+      "imageUrl": "https://picsum.photos/seed/taylor/400/400",
+      "imageHint": "woman city"
+    },
+    {
+      "id": "ai-companion",
+      "description": "Avatar for the AI companion",
+      "imageUrl": "https://picsum.photos/seed/ai/400/400",
+      "imageHint": "abstract robot"
+    }
+  ]
 }
