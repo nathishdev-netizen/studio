@@ -1,11 +1,15 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
+import { AuthProvider } from "@/context/AuthContext";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'SynergyDate',
-  description: 'Find your spark with an AI companion.',
+  title: "PulseChat - AI Companion Dating App",
+  description: "Your AI companion for meaningful connections and relationships",
 };
 
 export default function RootLayout({
@@ -29,7 +33,9 @@ export default function RootLayout({
           'font-body'
         )}
       >
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
         <Toaster />
       </body>
     </html>

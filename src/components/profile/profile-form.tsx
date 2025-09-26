@@ -56,13 +56,13 @@ function TagInput({ value, onChange, placeholder }: TagInputProps) {
   };
 
   const removeTag = (tagToRemove: string) => {
-    onChange(value.filter(tag => tag !== tagToRemove));
+    onChange((value || []).filter(tag => tag !== tagToRemove));
   };
 
   return (
     <div>
       <div className="flex flex-wrap gap-2 mb-2">
-        {value.map(tag => (
+        {(value || []).map(tag => (
           <Badge key={tag} variant="secondary" className="text-sm py-1">
             {tag}
             <button type="button" onClick={() => removeTag(tag)} className="ml-2 rounded-full hover:bg-background/50 p-0.5">
@@ -90,12 +90,12 @@ export function ProfileForm({ user }: { user: User }) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileFormSchema),
     defaultValues: {
-      name: user.name,
-      description: user.preferences.description,
-      interests: user.preferences.interests,
-      hobbies: user.preferences.hobbies,
-      likesDislikes: user.preferences.likesDislikes,
-      consentToMatch: user.consentToMatch,
+      name: user.name || '',
+      description: user.preferences?.description || '',
+      interests: user.preferences?.interests || [],
+      hobbies: user.preferences?.hobbies || [],
+      likesDislikes: user.preferences?.likesDislikes || '',
+      consentToMatch: user.consentToMatch || false,
     },
   });
   
@@ -187,7 +187,7 @@ export function ProfileForm({ user }: { user: User }) {
                 <TagInput
                   value={field.value}
                   onChange={field.onChange}
-                  placeholder="Add an interest and press Enter"
+                  placeholder="Add an interest "
                 />
               </FormControl>
               <FormDescription>
@@ -208,7 +208,7 @@ export function ProfileForm({ user }: { user: User }) {
                 <TagInput
                   value={field.value}
                   onChange={field.onChange}
-                  placeholder="Add a hobby and press Enter"
+                  placeholder="Add a hobby "
                 />
               </FormControl>
               <FormDescription>

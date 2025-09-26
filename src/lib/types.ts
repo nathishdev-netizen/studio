@@ -4,13 +4,17 @@ export type User = {
   id: string;
   name: string;
   email: string;
+  age?: number;
   profilePic: ImagePlaceholder;
-  preferences: {
+  preferences?: {
     interests: string[];
     hobbies: string[];
     likesDislikes: string;
     description: string;
   };
+  interests?: string[];
+  personalityTraits?: string[];
+  relationshipGoals?: string;
   consentToMatch: boolean;
   profileSummary?: string;
 };
@@ -29,4 +33,7 @@ export type AiChatMessage = {
   sender: 'user' | 'ai';
   text: string;
   timestamp: Date;
+  hasConnectionSuggestion?: boolean;
+  hasConnectionQuestion?: boolean;
+  suggestionData?: any;
 };

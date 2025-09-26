@@ -58,7 +58,7 @@ export function AppSidebar() {
         <Link href="/" className="flex items-center gap-2">
           <Sparkles className="h-7 w-7 text-primary" />
           <h2 className="text-xl font-bold font-headline text-foreground">
-            SynergyDate
+            PulseChat
           </h2>
         </Link>
       </SidebarHeader>

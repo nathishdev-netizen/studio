@@ -10,10 +10,10 @@ const findImage = (id: string) => {
 };
 
 export const currentUser: User = {
-  id: 'user-alex',
-  name: 'Alex',
-  email: 'alex.doe@example.com',
-  profilePic: findImage('user-alex'),
+  id: 'user-Nathish',
+  name: 'Nathish',
+  email: 'Nathish.doe@example.com',
+  profilePic: findImage('user-Nathish'),
   preferences: {
     interests: ['Artificial Intelligence', 'Sci-Fi Movies', 'Jazz Music'],
     hobbies: ['Hiking', 'Photography', 'Cooking'],
@@ -108,7 +108,7 @@ export const aiChatHistory: AiChatMessage[] = [
   {
     id: 'msg-1',
     sender: 'ai',
-    text: "Hello Alex! I'm your AI companion. What's on your mind today?",
+    text: "Hello Nathish! I'm your AI companion. What's on your mind today?",
     timestamp: new Date(new Date().getTime() - 1000 * 60 * 5),
   },
   {
@@ -126,6 +126,6 @@ export const aiChatHistory: AiChatMessage[] = [
 ];
 
 export const aiCompanion = {
-    name: 'Synergy',
+    name: 'Pulse',
     profilePic: findImage('ai-companion')
 }

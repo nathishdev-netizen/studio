@@ -1,4 +1,4 @@
-# **App Name**: SynergyDate
+# **App Name**: PulseChat
 
 ## Core Features:
 
